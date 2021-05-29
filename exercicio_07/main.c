@@ -2,48 +2,29 @@
 
 int	main(void)
 {
-	float	gradeA;
-	float	gradeB;
-	float	gradeC;
-	float	avarage;
+	double	gradeA;
+	double	gradeB;
+	double	gradeC;
+	double	avarage;
 
-	printf("Infome a sua nota do trabalho de laboratorio:\n");
-	scanf("%f", gradeA);
-	printf("Infome a sua nota da avaliacao semestral:\n");
-	scanf("%f", gradeB);
-	printf("Infome a sua nota do exame final:\n");
-	scanf("%f", gradeC);
-	if (gradeA < 0)
+	printf("Informe a sua nota do trabalho de laboratorio:\n");
+	scanf("%lf", &gradeA);
+	printf("Informe a sua nota da avaliação semestral:\n");
+	scanf("%lf", &gradeB);
+	printf("Informe a sua nota do exame final:\n");
+	scanf("%lf", &gradeC);
+	avarage = ((gradeA * 2.0) + (gradeB * 3.0) + (gradeC * 5.0)) / 10;
+	if (avarage <= 2.9)
 	{
-		gradeA = 0;
+		printf("Voce esta reprovado!\n");
 	}
-	if (gradeB < 0)
+	else if (avarage > 2.9 && avarage <= 4.9)
 	{
-		gradeB = 0;
+		printf("Voce esta de recuperação!\n");
 	}
-	if (gradeC < 0)
+	else
 	{
-		gradeC = 0;
+		printf("Voce esta aprovado com média! %.2lf\n", avarage);
 	}
-	avarage = (gradeA * 2) + (gradeB * 3) + (gradeC * 5) / 10;
-	if	(avarage <= 2.9)
-	{
-		printf("Voce esta reprovado!\n");pr
-	}
-	if else (avarage > 2.9 &&)
-
-	switch (avarage)
-	{
-	case: (avarage <= 2.9);
-	printf("Voce esta reprovado!\n");
-	break;
-
-	case: (avarage > 2.9 && <= 4.9);
-	printf("Voce esta de recuperacao!\n");
-	break;
-
-	case: (avarage > 4.9);
-	printf("Voce esta aprovado!\n");
-	break;
-	}
+	return (0);
 }
